@@ -27,12 +27,22 @@ body {
   flex-wrap: wrap;
 }
 
-/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;       /* Prevents logo from shrinking */
+  max-width: 320px;
+}
+
 .logo img {
-  height: 60px;
+  height: 72px;        /* Ideal visible height */
+  max-width: 280px;    /* Supports wide rectangular logos */
+  width: auto;
   object-fit: contain;
   cursor: pointer;
 }
+
+
 
 /* Search Bar */
 .search {
@@ -41,7 +51,7 @@ body {
   gap: 10px;
   flex: 1;
   justify-content: center;
-  max-width: 700px;
+  max-width: 550px;
   margin: 10px 0;
 }
 

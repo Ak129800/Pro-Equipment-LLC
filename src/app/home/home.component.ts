@@ -59,129 +59,145 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   products: Product[] = [
     {
-      name: 'Peripheral Instruments',
-      description: 'Essential components to enhance and extend the capabilities of analytical instruments.',
-      imageUrl: 'gc.png',
+      name: 'Autoclaves & Labware Washers',
+      description: 'Advanced sterilization and washing systems ensuring contamination-free laboratory operations.',
+      imageUrl: '11.jpg',
       subProducts: [
-        { name: 'GC - APPI', imageUrl: 'gc.png' },
-        { name: 'Upgrades', imageUrl: 'Upgrades.png' },
-        { name: 'GC, LC, Autosampler', imageUrl: 'Autosampler.png' },
-        { name: 'Accessory Devices', imageUrl: 'Accessory_Devices.png' }
-      ]
-    },
-    {
-      name: 'MS Spare Parts',
-      description: 'High-quality spare parts for maintenance and repair of mass spectrometry systems.',
-      imageUrl: 'Multipliers.png',
-      subProducts: [
-        { name: 'Filament Repair', imageUrl: 'Filament_Repair.png' },
-        { name: 'Filaments, new', imageUrl: 'Filaments_new.png' },
-        { name: 'Heaters, Lamps & Probes', imageUrl: 'Heaters.png' },
-        { name: 'Ion Source Parts for MS', imageUrl: 'Ion.png' },
-        { name: 'Multipliers and Slits for MS', imageUrl: 'Multipliers.png' },
-        { name: 'Sample Supply, GC Coupling', imageUrl: 'Sample_Supply.png' },
-        { name: 'Gaskets', imageUrl: 'Gaskets.png' },
-        { name: 'Accessory Devices', imageUrl: 'Accessory.png' },
-        { name: 'MS Electronics', imageUrl: 'MS.png' }
-      ]
-    },
-    {
-      name: 'Data Processing',
-      description: 'Advanced software tools and MS libraries for efficient and reliable data analysis.',
-      imageUrl: 'Software.png',
-      subProducts: [
-        { name: 'Software', imageUrl: 'Software.png' },
-        { name: 'MS Libraries', imageUrl: 'MS_Lib.png' }
-      ]
-    },
-    {
-      name: 'Vacuum Generation',
-      description: 'Reliable vacuum solutions for instrument stability and performance.',
-      imageUrl: 'Vacuum_oils.png',
-      subProducts: [
-        { name: 'Forepumps and Accessories', imageUrl: 'Forepumps.png' },
-        { name: 'Turbopumps', imageUrl: 'Turbopumps.png' },
-        { name: 'Vacuum Oils', imageUrl: 'Vacuum_oils.png' },
-        { name: 'Vacuum Measurement', imageUrl: 'Vacuum_Measurements.png' },
-        { name: 'Noise Reduction Boxes', imageUrl: 'Noise.png' }
-      ]
-    },
-    {
-      name: 'Vacuum Components',
-      description: 'Complete set of vacuum fittings and components for system integration.',
-      imageUrl: 'Vaccum_hoses.png',
-      subProducts: [
-        { name: 'KF Series Components', imageUrl: 'KF.png' },
-        { name: 'ISO Series Components', imageUrl: 'ISO.png' },
-        { name: 'CF Series Components', imageUrl: 'CF.png' },
-        { name: 'Vaccum hoses', imageUrl: 'Vaccum_hoses.png' }
-      ]
-    },
-    {
-      name: 'GC Accessories',
-      description: 'All necessary accessories to maintain and optimize Gas Chromatography systems.',
-      imageUrl: 'GC_Gas.png',
-      subProducts: [
-        { name: 'GC Coloumns and Accessories', imageUrl: 'GC_Coloumns.png' },
-        { name: 'GC Gas Supply', imageUrl: 'GC_Gas.png' },
-        { name: 'GC Injector Lines etc.', imageUrl: 'GC_Injector.png' },
-        { name: 'GC Septa', imageUrl: 'GC_Septa.png' },
-        { name: 'GC Ferrules', imageUrl: 'GC_Ferrules.png' },
-        { name: 'GC Autosampler Vials', imageUrl: 'GC_Autosampler.png' }
-      ]
-    },
-    {
-      name: 'LC Accessories',
-      description: 'Accessories tailored for Liquid Chromatography to ensure smooth operation and accuracy.',
-      imageUrl: 'Peek_tubbing.png',
-      subProducts: [
-        { name: 'Nitrogengenerator', imageUrl: 'Nitrogengenerator.png' },
-        { name: 'Vacuum Degasser', imageUrl: 'Vacuum_Degasser.png' },
-        { name: 'PEEK Tubing', imageUrl: 'Peek_tubbing.png' },
-        { name: 'Tubbing, Fittings, Filter etc.', imageUrl: 'Tubbing.png' },
-        { name: 'Syringe Filter', imageUrl: 'Syringe_Filter.png' },
-        { name: 'Diffusion Caps', imageUrl: 'Diffussion_cap.png' },
-        { name: 'Wash Vials', imageUrl: 'Wash_Vials.png' }
-      ]
-    },
-    {
-      name: 'Cleaning & Standards',
-      description: 'Cleaning tools and certified calibration standards for precise instrumentation.',
-      imageUrl: 'Tools.png',
-      subProducts: [
-        { name: 'Cleaning Supplies', imageUrl: 'Cleaning_Supplies.png' },
-        { name: 'Tools', imageUrl: 'Tools.png' },
-        { name: 'Calibration & Stds.', imageUrl: 'ToolsCalibration_Stds.png' }
-      ]
-    },
-    {
-      name: 'Art. by Suppliers',
-      description: 'Vendor-specific products categorized for convenience and compatibility.',
-      imageUrl: 'GC_LC_MS.png',
-      subProducts: [
-        { name: 'GC LC MS', imageUrl: 'GC_LC_MS.png' },
-        { name: 'Vacuum', imageUrl: 'Vaccum.png' }
-      ]
-    },
-    {
-      name: 'Art. by Instruments',
-      description: 'Instrument-specific parts and assemblies for Thermo Fisher GC/MS platforms.',
-      imageUrl: 'TRACE_FOCUS_GC.png',
-      subProducts: [
-        { name: 'TRACE GC, FOCUS GC', imageUrl: 'TRACE_FOCUS_GC.png' },
-        { name: 'TriPlus and CTC Autosampler', imageUrl: 'Triplis_CTC_Autosampler.png' },
-        { name: 'DSQ / DSQ II GC/MS', imageUrl: 'DSQorDSQII_GCorMS.png' },
-        { name: 'PolarisQ GC/MS', imageUrl: 'PolarisQ_GCorMS.png' },
-        { name: 'TSQ Quantum GC GC/MS', imageUrl: 'TSQ_Quantum_GC_GCorMS.png' },
-        { name: 'DFS High Resolution GC/MS', imageUrl: 'DFS_High_Resolution_GCorMS.png' },
-        { name: 'MAT95 High Resolution GC/MS', imageUrl: 'MAT95_High_Resolution_GCorMS.png' },
-        { name: 'ITD®, ITS40®', imageUrl: 'ITD_ITS40.png' },
-        { name: 'Element 1/2/GD/XR HR ICP MS', imageUrl: 'Element_1or2orGDorXR_HR_ICP_MS.png' },
-        { name: 'LTQ, LTQ XL, Velos, Velos Pro®', imageUrl: 'LTQ.png' },
-        { name: 'LTQ OrbiTrap®', imageUrl: 'LTQ_OrbiTrap.png' },
-        { name: 'IDmicro Breath', imageUrl: 'IDmicro_Breath.png' }
+        {
+          name: 'Glassware Washer Standard and Spindle Racks by Labconco',
+          imageUrl: '11.jpg'
+        },
+        {
+          name: 'Labware Inserts for Glassware Washers by Labconco',
+          imageUrl: '12.jpg'
+        },
+        {
+          name: 'BioClave 8L, 18L, 28L Autoclaves by Benchmark Scientific',
+          imageUrl: '13.jpg'
+        },
+        {
+          name: 'Micro Bead Sterilizer by Benchmark Scientific',
+          imageUrl: '1.4.webp'
+        },
+        {
+          name: 'UVClave Ultraviolet Chambers by Benchmark Scientific',
+          imageUrl: '1.5.webp'
+        },
+        {
+          name: 'BactiZapper™ Infrared MicroSterilizer by Benchmark Scientific',
+          imageUrl: '1.6.webp'
+        }
       ]
     }
+    ,
+    {
+      name: 'Balances',
+      description: 'High-precision weighing instruments designed for analytical, research, and industrial laboratory use.',
+      imageUrl: '22.webp',
+      subProducts: [
+        {
+          name: 'Cubis II Ultra Hi-Resolution High-Capacity Micro Balances with Motorized Draft Shield by Sartorius',
+          imageUrl: '21.webp'
+        },
+        {
+          name: 'Cubis II Ultra Hi-Res High Capacity Micro Balances with Manual Draft Shield and Software Packages by Sartorius',
+          imageUrl: '22.webp'
+        },
+        {
+          name: 'Cubis II Ultra Hi-Resolution High-Capacity Micro Balances with Manual Draft Shield by Sartorius',
+          imageUrl: '23.webp'
+        },
+        {
+          name: 'Cubis II Ultra-Micro and Microbalances by Sartorius',
+          imageUrl: '24.webp'
+        },
+        {
+          name: 'Cubis II Semi-Micro Balances by Sartorius',
+          imageUrl: '25.webp'
+        },
+        {
+          name: 'Cubis II Analytical Balances by Sartorius',
+          imageUrl: '26.jfif'
+        }
+      ]
+    }
+    ,
+    {
+      name: 'Baths & Chillers',
+      description: 'Laboratory temperature control equipment for heating, cooling, and stable thermal processing.',
+      imageUrl: '33.webp',
+      subProducts: [
+        {
+          name: 'MaxQ™ 7000 Water Bath Orbital Shaker by Thermo Scientific',
+          imageUrl: '31.webp'
+        },
+        {
+          name: 'PRESTO A45 and A45t Air-Cooled Temperature Control Process Systems by Julabo',
+          imageUrl: '32.webp'
+        },
+        {
+          name: 'Dry Bath; Digital, 4 Programmable, Benchmark, 120 V',
+          imageUrl: '33.webp'
+        }
+      ]
+    }
+    ,
+    {
+      name: 'Calorimeters',
+      description: 'High-precision instruments for measuring heat flow, energy content, and thermal properties of materials.',
+      imageUrl: '42.webp',
+      subProducts: [
+        {
+          name: 'C6000 Calorimeters',
+          imageUrl: '41.webp'
+        },
+        {
+          name: 'C200 Calorimeters',
+          imageUrl: '42.webp'
+        }
+      ]
+    }
+    ,
+    {
+      name: 'Cell Culture Equipment',
+      description: 'Specialized laboratory equipment designed to maintain, grow, and handle biological cell cultures under controlled conditions.',
+      imageUrl: '51.webp',
+      subProducts: [
+        {
+          name: 'Anaerobic/Hypoxia Glove Box Chambers by Shel Lab',
+          imageUrl: '51.webp'
+        },
+        {
+          name: 'MaxQ™ 6000 Incubated/Refrigerated Stackable Shakers by Thermo Scientific',
+          imageUrl: '52.webp'
+        },
+        {
+          name: 'Logic Class II A2 Biological Safety Cabinets by Labconco',
+          imageUrl: '53.webp'
+        }
+      ]
+    }
+    ,
+    {
+      name: 'Centrifuges',
+      description: 'High-performance centrifugation systems for clinical, research, and industrial laboratory applications.',
+      imageUrl: '62.webp',
+      subProducts: [
+        {
+          name: 'Z36-HK Super Speed Refrigerated Centrifuges by Hermle',
+          imageUrl: '61.webp'
+        },
+        {
+          name: 'Multifuge X4/X4F Pro Series Centrifuge Packages by Thermo Scientific',
+          imageUrl: '62.webp'
+        },
+        {
+          name: 'TX-750 Swinging Bucket Rotor Package by Thermo Fisher Scientific',
+          imageUrl: '63.webp'
+        }
+      ]
+    }
+
   ];
 
 
