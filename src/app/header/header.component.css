@@ -1,0 +1,317 @@
+/* Reset & General */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Header Container */
+.nav_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Search Bar */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+  max-width: 700px;
+  margin: 10px 0;
+}
+
+.search input {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 17px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+}
+
+.search-btn {
+  background-color: #478069;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn:hover {
+  background-color: #357ab8;
+}
+
+.search-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Navigation Menu */
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  color: #333;
+  font-size: 17px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu li a:hover {
+  background-color: #e9f0fb;
+  color: #4a90e2;
+}
+
+/* Dropdown - Modern Glassmorphism Style */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  border-radius: 16px;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.35s ease;
+  z-index: 1000;
+}
+
+.menu li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown li {
+  width: 100%;
+  text-align: center;
+  /* Center text */
+}
+
+.dropdown a {
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c3e50;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.dropdown a:hover {
+  background-color: #dfefff;
+  color: #2a6adf;
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.25);
+}
+
+/* Remove any previous icon */
+.dropdown a::before {
+  content: none;
+}
+
+/* No Results Text */
+.no-results {
+  text-align: center;
+  color: #d9534f;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav_container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu li a {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    padding: 0;
+    transform: none;
+    backdrop-filter: none;
+  }
+
+  .dropdown a {
+    background-color: #ffffff;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-align: left;
+  }
+}
+
+.products-dropdown {
+  position: relative;
+}
+
+/* MAIN PRODUCT DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+}
+
+.dropdown>li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.dropdown>li:hover {
+  background-color: #f0f0f0;
+}
+
+/* SUBPRODUCT DROPDOWN */
+.sub-dropdown {
+  position: fixed;
+  /* allows full-screen visibility */
+  background-color: #fafafa;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 270px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 999;
+  pointer-events: auto;
+}
+
+/* Align LEFT of parent list item */
+.sub-dropdown.left-down {
+  right: 100%;
+  /* flush to left of parent */
+  top: 0;
+  /* aligns to top of parent item */
+}
+
+/* If dropdown is at bottom of screen */
+.sub-dropdown.left-up {
+  right: 100%;
+  bottom: 0;
+}
+
+/* SUBPRODUCT ITEM */
+.sub-dropdown li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.3rem;
+  font-size: 0.95rem;
+}
+
+.sub-dropdown li:hover {
+  background-color: #e6f7ff;
+}
+
+/* SUBPRODUCT IMAGE */
+.sub-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* SCROLLBAR STYLING */
+.sub-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sub-dropdown::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+
+.sub-dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}

@@ -1,0 +1,46 @@
+<header class="nav_container">
+  <div class="logo">
+    <img rel="preload" src="Stamp.jpeg" [routerLink]="['/home']" alt="Logo">
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Enter Product Name" (keyup.enter)="searchProduct()" />
+    <button class="search-btn" (click)="searchProduct()">
+      <img src="Search.webp" alt="Search" />
+    </button>
+  </div>
+
+
+  <nav class="menu">
+    <ul>
+      <li><a [routerLink]="['/home']">Home</a></li>
+      <li><a [routerLink]="['/about']">About Company</a></li>
+      <li class="products-dropdown" (mouseenter)="showDropdown = true" (mouseleave)="resetDropdown()">
+        <a>Products</a>
+
+        <ul class="dropdown" *ngIf="showDropdown">
+          <li *ngFor="let product of products" (mouseenter)="onProductHover($event, product)"
+            (click)="navigateToDetails(product)">
+
+            <div class="product-name">{{ product.name }}</div>
+
+            <ul class="sub-dropdown" *ngIf="hoveredProduct === product" [ngClass]="subDropdownDirection">
+              <li *ngFor="let sub of product.subProducts">
+                <img [src]="sub.imageUrl" [alt]="sub.name" class="sub-img" />
+                {{ sub.name }}
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+      </li>
+
+
+      <li><a [routerLink]="['/contact']">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+</header>
+<p *ngIf="noResults" class="no-results">❌ No Products or Subproducts Matched Your Search</p>

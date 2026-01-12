@@ -1,0 +1,173 @@
+/* === Reset & Global Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #222;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* === About Section Styling === */
+.about-section {
+    width: 100%;
+    padding: 80px 0;
+    background: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* === Content Column Styling === */
+.content-column {
+    width: 50%;
+    max-width: 600px;
+}
+
+/* === Section Title === */
+.sec-title {
+    margin-bottom: 25px;
+}
+
+.sec-title .title {
+    font-size: 20px;
+    color: #ff2222;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.sec-title h2 {
+    font-size: 38px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* === Text Styling === */
+.text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+/* === List Styling === */
+.list-style-one {
+    margin-bottom: 0;
+    /* Remove bottom space */
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-style-one li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.list-style-one li::before {
+    content: "✔";
+    color: #ff2222;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* === Button Styling === */
+.btn-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.theme-btn {
+    display: inline-block;
+    padding: 15px 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff2222;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.theme-btn:hover {
+    background-color: #001e57;
+}
+
+/* === Right Image Styling === */
+.image-column {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-column img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 1024px) {
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-column,
+    .image-column {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .image-column {
+        margin-top: 30px;
+    }
+
+    .btn-box {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec-title h2 {
+        font-size: 28px;
+    }
+
+    .text,
+    .list-style-one li {
+        font-size: 16px;
+    }
+
+    .theme-btn {
+        padding: 12px 40px;
+        font-size: 16px;
+    }
+}

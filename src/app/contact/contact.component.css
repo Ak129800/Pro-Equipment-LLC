@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url('/ContactBack.webp');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.4));
+  z-index: 1;
+}
+
+app-header,
+app-footer {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  position: relative;
+  z-index: 3;
+  padding: 50px 20px;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-header h2 {
+  color: #2a2a2a;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  color: #444;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  /* Vertically align icon and text */
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.7);
+  /* Lightened background */
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-item:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Icon Box */
+.contact-info-icon {
+  height: 60px;
+  width: 60px;
+  background-color: #f0f0f0;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Image inside the circle */
+.contact-info-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Contact Content */
+.contact-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Vertically center content relative to icon */
+  margin-left: 15px;
+  text-align: left;
+}
+
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #333;
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.5em;
+  }
+
+  .section-header p {
+    font-size: 1em;
+  }
+
+  .contact-info-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .contact-info-icon {
+    margin-bottom: 10px;
+  }
+
+  .contact-info-content {
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+}

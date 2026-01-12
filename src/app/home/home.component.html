@@ -1,0 +1,166 @@
+<app-header></app-header>
+
+<section class="home" id="home">
+  <div class="home-text">
+    <h1>Reliable <span>Repairs</span> & <br> Expert <span>Services</span></h1>
+    <p>At Global Supplies, we specialize in refurbishing and selling mass spectrometers from Thermo Fisher Scientific.
+      We offer worldwide repair and service for Ion Trap MS, Quadrupole MS, and High Resolution GC-MS systems.</p>
+    <p>We provide full service or maintenance contracts with response times often faster than 24 hours, depending on
+      location. With highly qualified professionals and global references, we support customers through tailored
+      contracts or on-demand services.</p>
+    <a (click)="navigateToAbout()" class="btn">Explore</a>
+  </div>
+</section>
+
+
+
+<section class="difference-section">
+  <div class="features-header">
+    <h2 class="features-title">
+      <span class="decorative-dash">~</span>
+      Why Choose Global Supplies
+      <span class="decorative-dash">~</span>
+    </h2>
+  </div>
+
+  <div class="carousel">
+    <div class="carousel-track">
+      <!-- Item 1 -->
+      <div class="carousel-item">
+        <div class="circle orange">
+          <div class="icon wavy"></div>
+        </div>
+        <div class="description">
+          <h2>🛠 Expert Refurbishment</h2>
+          <p>We refurbish Thermo Fisher Scientific mass spectrometers to original quality standards, ensuring precision,
+            performance, and cost-effective solutions for labs worldwide.</p>
+        </div>
+        <div class="circle yellow">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 3l4 7h-8l4-7z"></path>
+            <path d="M12 21l-4-7h8l-4 7z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="carousel-item">
+        <div class="circle yellow">
+          <div class="icon star"></div>
+        </div>
+        <div class="description">
+          <h2>🌍 Global Repair Services</h2>
+          <p>Our skilled technicians provide fast, reliable repair services worldwide — from Ion Trap to High Resolution
+            GC-MS systems, including vacuum pump repairs.</p>
+        </div>
+        <div class="circle pink">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M3 6c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+            <path d="M3 12c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+            <path d="M3 18c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="carousel-item">
+        <div class="circle orange">
+          <div class="icon wavy"></div>
+        </div>
+        <div class="description">
+          <h2>📞 Fast Response & Support</h2>
+          <p>With service contracts and on-demand support, we offer sub-24-hour response times, expert phone assistance,
+            and repair of electronic/mechanical MS components.</p>
+        </div>
+        <div class="circle yellow">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 3l4 7h-8l4-7z"></path>
+            <path d="M12 21l-4-7h8l-4 7z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="carousel-item">
+        <div class="circle yellow">
+          <div class="icon star"></div>
+        </div>
+        <div class="description">
+          <h2>🔧 Component-Level Repairs</h2>
+          <p>We go deep — repairing individual circuit boards and mechanical parts of your mass spectrometer to minimize
+            downtime and save on full replacements.</p>
+        </div>
+        <div class="circle orange">
+          <div class="icon wavy"></div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="carousel-item">
+        <div class="circle pink">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M3 6c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+            <path d="M3 12c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+            <path d="M3 18c2 0 4 2 6 2s4-2 6-2 4 2 6 2"></path>
+          </svg>
+        </div>
+        <div class="description">
+          <h2>🏆 Trusted Worldwide</h2>
+          <p>From Europe to Asia and the Americas, our customers rely on us for precision service, trusted expertise,
+            and long-term maintenance solutions.</p>
+        </div>
+        <div class="circle yellow">
+          <svg viewBox="0 0 24 24" class="icon">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9 12l2 2l4-4"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <button class="nav-btn prev">&larr;</button>
+    <button class="nav-btn next">&rarr;</button>
+  </div>
+</section>
+
+
+<!-- Features Section -->
+<section id="features">
+  <div class="features-container">
+    <div class="feature-card">
+      <h3>Vision</h3>
+      <p>To be the global leader in analytical instrument servicing by combining expert human knowledge with AI-powered
+        diagnostics. We envision a future where every lab,
+        cost-effective, and intelligent solutions that extend the life and performance of critical scientific equipment.
+      </p>
+    </div>
+    <div class="feature-card">
+      <h3>Mission</h3>
+      <p>Our mission at Global Supplies is to deliver world-class refurbishment and repair services for Thermo Fisher
+        Scientific mass spectrometers. We harness artificial intelligence to streamline fault detection, enhance service
+        precision, and provide proactive support.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="resources">
+  <h2>Our Products</h2>
+  <div class="resources-container">
+    <div *ngFor="let product of products" class="resource-card">
+      <img [src]="product.imageUrl" [alt]="product.name" />
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <button class="product-btn" (click)="navigateToDetails(product)">View Products</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<app-footer></app-footer>

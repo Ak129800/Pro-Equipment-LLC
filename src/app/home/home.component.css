@@ -1,0 +1,688 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #071952;
+    margin: 0;
+    padding: 0;
+    background-color: #EBF4F6;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #071952;
+}
+
+#About {
+    position: relative;
+    background-image: url('/Home.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #EBF4F6;
+    color: rgba(7, 25, 82, 0.9);
+    text-align: center;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#About::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+#About>* {
+    position: relative;
+    z-index: 2;
+}
+
+.About-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.About-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: center;
+    padding: 0 20px;
+    color: #000000;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#About .cta-btn {
+    background-color: #37B7C3;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#About .cta-btn:hover {
+    background-color: #088395;
+}
+
+:root {
+    --primary: #0ff;
+    /* Neon Cyan */
+    --accent: #08f7fe;
+    /* Lighter Neon Cyan */
+    --background: #0a0a0a;
+    /* Deep Dark Background */
+    --card-background: #121212;
+    /* Darker for cards */
+    --text-primary: #f5f5f5;
+    /* Almost White */
+    --text-secondary: #aaaaaa;
+    /* Soft Grey */
+    --border-color: #000000;
+    /* Black Border */
+}
+
+#resources {
+    background-color: var(--background);
+    padding: 2rem 1rem;
+    color: var(--text-primary);
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    background: none;
+    /* No background gradient */
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--accent);
+    /* Add a glow to make it pop */
+}
+
+.resources-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.resource-card {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    padding: 1.5rem 1rem;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(8, 247, 254, 0.4);
+    border-color: var(--accent);
+}
+
+.resource-image {
+    width: 90%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1rem auto 0.5rem;
+    border: 2px solid var(--border-color);
+}
+
+.resource-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.6rem;
+    color: var(--text-primary);
+}
+
+.resource-link {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary);
+    color: var(--background);
+    transform: scale(1.05);
+}
+
+.cta-btn {
+    background-color: #222;
+    /* Dark Grey */
+    color: white;
+    /* White text */
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--accent);
+    /* Thin light-cyan border */
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: var(--accent);
+    /* Light Cyan on hover */
+    color: var(--background);
+    /* Dark background text on hover */
+    transform: scale(1.05);
+    border-color: var(--primary);
+}
+
+
+@media (max-width: 768px) {
+    .resources-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .resources-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.difference-section {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.features-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0a0a23;
+    /* Dark blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.decorative-dash {
+    color: black;
+    font-size: 2rem;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    opacity: 0.6;
+    transform: scale(0.92);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.circle.orange {
+    background-color: #fef3c7;
+}
+
+.circle.yellow {
+    background-color: #fde68a;
+}
+
+.circle.pink {
+    background-color: #fbcfe8;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.icon.wavy,
+.icon.star {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icon.wavy {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4c6 16 15-4 21 12"></path></svg>');
+}
+
+.icon.star {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black"><polygon stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="12 2 15 8 22 9 17 14 18 22 12 18 6 22 7 14 2 9 9 8 12 2"></polygon></svg>');
+}
+
+.description {
+    max-width: 320px;
+    padding: 20px 40px;
+    background-color: #f9fafb;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e2e8f0;
+    transition: transform 0.3s;
+}
+
+.description:hover {
+    transform: translateY(-8px);
+}
+
+.description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0a0a23;
+}
+
+.description p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.nav-btn {
+    background-color: #0a0a23;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #00b4d8;
+    color: #0a0a23;
+}
+
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    /* Needed for positioning the pseudo-element */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    z-index: -1;
+    /* Ensure background stays behind the text box */
+}
+
+.home-text {
+    position: relative;
+    max-width: 800px;
+    padding: 40px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    /* Center align all text inside */
+    margin: 0 auto;
+    /* Center the whole .home-text div horizontally */
+}
+
+.home-text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: white;
+}
+
+.home-text span {
+    color: var(--main-color);
+}
+
+.home-text p {
+    font-size: 1.1rem;
+    margin: 1rem 0 1.8rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    /* White background */
+    color: var(--main-color);
+    /* Text in your main brand color */
+    padding: 15px 30px;
+    /* Good padding for a boxy shape */
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    /* Slightly rounded box */
+    border: 2px solid var(--main-color);
+    /* Always visible border */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    /* Nice shadow for depth */
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    cursor: pointer;
+    /* 👈 Pointer (hand) effect added */
+}
+
+.btn:hover {
+    background-color: var(--main-color);
+    /* On hover, background fills with main color */
+    color: #fff;
+    /* Text becomes white */
+    transform: scale(1.05);
+    /* Slight lift effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    /* Stronger shadow */
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Features Section - Dark Theme */
+#features {
+    background-color: #0d1b2a;
+    /* Deep navy background */
+    padding: 3rem 1rem;
+    color: #f1f1f1;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 0;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card {
+    background-color: #1b263b;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    max-width: 450px;
+    text-align: center;
+    color: #e0e1dd;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid #415a77;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #00b4d8;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #adb5bd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Section Styling */
+#resources {
+  background: linear-gradient(to bottom, #f9fafb, #e2e8f0);
+  padding: 4rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#resources h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #1e293b;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Grid Layout */
+.resources-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers cards and fixes alignment */
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Product Card */
+.resource-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  border: 2px solid #bbf7d0; /* Light green on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Product Image */
+.resource-card img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Product Title */
+.resource-card h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Product Description */
+.resource-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+}
+
+/* CTA Button */
+.product-btn {
+  background: linear-gradient(to right, #4ade80, #22c55e); /* Light Green Gradient */
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 160px;
+}
+
+.product-btn:hover {
+  background: linear-gradient(to right, #86efac, #34d399); /* Softer Green */
+  transform: scale(1.04);
+}
+
+.product-btn:active {
+  transform: scale(0.97);
+  background-color: #22c55e;
+}
+

@@ -1,0 +1,111 @@
+/* Section background */
+#terms-of-service {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #eaf6ff, #ffffff);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Card styling */
+.card {
+  max-width: 900px;
+  background: #ffffff;
+  padding: 50px;
+  margin: auto;
+  box-shadow: 0 12px 30px rgba(0, 90, 141, 0.12);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 90, 141, 0.2);
+}
+
+/* Heading */
+.primary-heading {
+  color: #005a8d;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.primary-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #0091d5;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Paragraph and bullets */
+.paragraph {
+  line-height: 1.85;
+  font-size: 17px;
+  color: #444;
+}
+
+.bold {
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.paragraph span.bold::before {
+  content: "✔ ";
+  color: #0091d5;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+/* Link styling */
+a {
+  color: #0074bd;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  /* Makes the mouse cursor a hand on hover */
+}
+
+a:hover {
+  text-decoration: underline;
+  /* Optional: Adds an underline on hover */
+}
+
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .primary-heading {
+    font-size: 28px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
